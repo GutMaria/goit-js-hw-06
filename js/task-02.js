@@ -10,16 +10,14 @@ const ingredients = [
 
 const ulEl = document.querySelector('#ingredients');
 
-const createList = (array) => {
-  array.map((name) => {
+const createList = (array) => { 
+  return array.map((name) => {
+    
     const itemEl = document.createElement('li');
     itemEl.textContent = name;
     itemEl.classList = 'item';
-    ulEl.append(itemEl);//мабуть це не одноразове додавання елементів?! не знаю як по іншому зробити
+    return itemEl;
   })
 };
 
-createList(ingredients); 
-
-// ulEl.insertAdjacentHTML('afterbegin', createList(ingredients));   
-// так не виходить навіть якщо після array.map() зробити .join('')
+ulEl.append(...createList(ingredients));
