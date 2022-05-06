@@ -15,7 +15,7 @@ const createList = (array) => {
     const itemEl = document.createElement('li');
     itemEl.textContent = name;
     itemEl.classList = 'item';
-    ulEl.append(itemEl);//мабуть це не одноразове додавання елементыв?! не знаю як по іншому зробити
+    ulEl.append(itemEl);//мабуть це не одноразове додавання елементів?! не знаю як по іншому зробити
   })
 };
 
